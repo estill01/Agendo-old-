@@ -1,0 +1,14 @@
+<h1>What I'm trying to get done</h1>
+
+<% @projects.each do |project| %>
+    <h2><%= link_to(project.name, project_path(project)) %></h2>
+    <p>
+        <%= project.description %> - 
+        <%= link_to "Edit", edit_project_url(project) %> | 
+        <%= link_to "Delete", project_url(project), :method => :delete %>
+        </p>
+<% end %>
+
+<hr />
+
+<%= link_to "Add new project", new_project_path %>

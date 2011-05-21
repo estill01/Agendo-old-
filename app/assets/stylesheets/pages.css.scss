@@ -1,0 +1,35 @@
+/* 
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+  You can use Sass (SCSS) here: http://sass-lang.com/
+*/
+html {
+	font-size: 15px;
+
+	p, a, h2 {
+		margin: 0;
+		padding: 0;
+		line-height: 1em;
+	}
+}
+#header {
+	width: 100%;
+	background-color: yellow;
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+}
+
+#flash {
+	width: 100%;
+	background-color: red;
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	display: block;	
+	top: 0;
+	left: 0;
+}

@@ -1,0 +1,18 @@
+<h2><%= @project.name %></h2>
+<p><%= @project.description %></p>
+
+<ul>
+    <% @project.needs.each do |need| %>
+        <% if need.completed %>
+            <li><%= need.description %> - DONE</li>
+        <% else %>
+            <li><%= need.description %> - <%= button_to "Complete", complete_need_path(@project.id, need.id) %></li>
+        <% end %>
+    <% end %>
+</ul>
+
+<%= form_for [@project, @need] do |form| %>
+    <p><%= form.text_field :description %> <%= form.submit %></p>
+<% end %>
+<h2 />
+<%= link_to "Home", projects_path %>
