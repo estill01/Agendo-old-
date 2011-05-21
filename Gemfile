@@ -15,6 +15,8 @@ gem 'uglifier'
 gem 'sprockets', '2.0.0.beta.2'
 gem 'jquery-rails'
 gem 'omniauth'
+gem 'heroku', '2.1.4'
+gem 'therubyracer-heroku', '0.8.1.pre3'
 
 # Use unicorn as the web server
 # gem 'unicorn'

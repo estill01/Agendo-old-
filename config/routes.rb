@@ -6,8 +6,11 @@ Agendo::Application.routes.draw do
     resources :needs  
   end
   
+  #Authentication
   match "/auth/:provider/callback" => "sessions#create"
-  match "/signout" => "sessions#destroy", :as => :signout
+  match "/signout"  =>  "sessions#destroy", :as => :signout
+  match "/auth/failure" => "sessions#failure"
+  
   
   match "projects/:project_id/needs/:id/complete" => "needs#complete", :as => :complete_need
   
